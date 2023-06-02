@@ -7,6 +7,6 @@ class Type {
         
         $className = "Classes\\App\\".$class;
 
-        return new $className(...$args);
+        return new $className(...array_values($args));
     }
 }
