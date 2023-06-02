@@ -84,13 +84,12 @@ foreach ($returnDimensions as $value) {
     $returnValues[] = $value;
 }
 
-
 echo $productType->handleRequest($type, $returnDimensions);
 header("Location: ./index.php");
 exit;
-}
-elseif (isset($_POST["massDelete"])) {
-        $item_ids = $_POST["items"];
+
+}elseif (isset($_POST["massDelete"])) {
+        $item_ids = isset($_POST['items']) ? $_POST['items'] : [];
         $ids = implode(",", $item_ids);
         $massDelete = new MassDeleter();
         $massDelete->delete($ids);

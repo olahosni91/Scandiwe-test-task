@@ -1,7 +1,9 @@
+
 <?php
 
 require_once './src/Classes/bootstrap.php';
 require_once './src/Classes/includes/Test.php';
+
 
 ?>
 
@@ -19,13 +21,13 @@ require_once './src/Classes/includes/Test.php';
     <form method="post" action="./index.php" >
         <div class="row justify-content-between">
 
-            <h2 class="fw-semi-bold col-6">Product List</h2>
+            <h2 class="fw-semi-bold col-6 my-3">Product List</h2>
 
             <div class="col-4 row justify-content-evenly">
 
-                <a href="addProduct.php" class="btn btn-success col-lg-4 col-md-5 col-sm-5">Add</a>
+                <button class="btn btn-success col-lg-4 col-md-5 col-sm-5 my-3"><a href="addProduct.php" class="text-decoration-none text-light">Add</a></button>
                 
-                <button class="btn btn-danger col-lg-4 col-md-5 col-sm-5" name="massDelete" type="submit">Mass Delete</button>
+                <button class="btn btn-danger col-lg-4 col-md-5 col-sm-5 my-3" name="massDelete" type="submit">Mass Delete</button>
 
             </div>
         </div>

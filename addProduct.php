@@ -16,12 +16,12 @@
         <div class="my-5">
             <div class="row justify-content-between">
 
-                <h2 class="fw-semi-bold col-6">Add Product</h2>
+                <h2 class="fw-semi-bold col-6 my-3">Add Product</h2>
     
                 <div class="col-4 row justify-content-evenly">
     
-                    <button type="submit" name="addProduct" class="btn btn-primary col-lg-4 col-md-5 col-sm-5">Save</button>
-                    <button type="reset" class="btn btn-secondary col-lg-4 col-md-5 col-sm-5">Cancel</button>
+                    <button type="submit" name="addProduct" class="btn btn-primary my-3 col-lg-4 col-md-5 col-sm-5">Save</button>
+                    <button type="reset" onclick="location.href='./index.php';" class="my-3 btn btn-secondary col-lg-4 col-md-5 col-sm-5">Cancel</button>
     
                 </div>
             </div>
@@ -50,30 +50,30 @@
                 <option value="Furniture">Furniture</option>
             </select>
         </div>
-        <div class="my-3" id="Book" style="display: none;">
+        <div class="my-3" id="Book" class="type" style="display: none;">
             <label for="price">Enter Book Weight (Kg)</label>
-            <input type="number" class="form-control extra BookInput" require name="weight">
+            <input type="number" step="0.05" class="form-control extra BookInput detailInput" name="weight">
         </div>
 
-        <div class="my-3" id="DVD" style="display: none;">
+        <div class="my-3" id="DVD" class="type" style="display: none;">
             <label for="price">Enter DVD Size (MB)</label>
-            <input type="number" class="form-control extra DVDInput" require name="size">
+            <input type="number" class="form-control extra DVDInput detailInput" name="size">
         </div>
         
-        <div id="Furniture" style="display: none;">
+        <div id="Furniture" class="type" style="display: none;">
         <div class="my-3">
             <label for="price">Enter Height (CM)</label>
-            <input type="number" class="form-control extra FurnitureInput" require name="height">
+            <input type="number" step="0.05" class="form-control extra FurnitureInput detailInput" name="height">
         </div>
         
         <div class="my-3">
             <label for="price">Enter Width (CM)</label>
-            <input type="number" class="form-control extra FurnitureInput" require name="width">
+            <input type="number" step="0.05" class="form-control extra FurnitureInput detailInput" name="width">
         </div>
         
         <div class="my-3">
             <label for="price">Enter length (CM)</label>
-            <input type="number" class="form-control extra FurnitureInput" require name="length">
+            <input type="number" step="0.05" class="form-control extra FurnitureInput detailInput" name="length">
         </div>
     </div>
 </form>

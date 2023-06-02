@@ -11,13 +11,16 @@ class MassDeleter extends Database{
     }
 
     public function delete($itemsIds){
-            $query = "DELETE FROM products WHERE id IN ($itemsIds)";
-            echo $query;
-            $stmt = $this->conn->prepare($query)->execute();
-            $this->conn->close();
-    
-            return $stmt;
+            if($itemsIds==''){
+                return $itemsIds;
+            }else{
+                $query = "DELETE FROM products WHERE id IN ($itemsIds)";
+                echo $query;
+                $stmt = $this->conn->prepare($query)->execute();
+                $this->conn->close();
+        
+                return $stmt;
+            }     
     }
-
 }
 ?>
